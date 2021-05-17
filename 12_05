@@ -1,0 +1,508 @@
+{
+ "metadata": {
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  },
+  "orig_nbformat": 2,
+  "kernelspec": {
+   "name": "python385jvsc74a57bd09625bcfe5cd3dfec619ce035c1d8d2496d74ed16b62b4417feab419ffa89f3de",
+   "display_name": "Python 3.8.5 64-bit ('base': conda)"
+  },
+  "metadata": {
+   "interpreter": {
+    "hash": "9625bcfe5cd3dfec619ce035c1d8d2496d74ed16b62b4417feab419ffa89f3de"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2,
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import string\n",
+    "import teksty as txt\n",
+    "def isalpha(l):\n",
+    "    return [ word.lower() for word in l if word.isalpha() ]\n",
+    "def clear(text):\n",
+    "\n",
+    "    t = [ word.strip(string.punctuation+string.digits+' ')\n",
+    "         for word in text.split() ]\n",
+    "    return isalpha(t)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": [
+       "['lorem',\n",
+       " 'ipsum',\n",
+       " 'dolor',\n",
+       " 'sit',\n",
+       " 'mi',\n",
+       " 'leo',\n",
+       " 'felis',\n",
+       " 'vitae',\n",
+       " 'arcu',\n",
+       " 'sed',\n",
+       " 'felis',\n",
+       " 'nulla',\n",
+       " 'iaculis',\n",
+       " 'arcu',\n",
+       " 'a',\n",
+       " 'erat',\n",
+       " 'nullam',\n",
+       " 'et',\n",
+       " 'magnis',\n",
+       " 'dis',\n",
+       " 'parturient',\n",
+       " 'montes',\n",
+       " 'nascetur',\n",
+       " 'ridiculus',\n",
+       " 'mus',\n",
+       " 'praesent',\n",
+       " 'ac',\n",
+       " 'diam',\n",
+       " 'aenean',\n",
+       " 'facilisis',\n",
+       " 'hendrerit',\n",
+       " 'donec',\n",
+       " 'ut',\n",
+       " 'eros',\n",
+       " 'sed',\n",
+       " 'diam',\n",
+       " 'lectus',\n",
+       " 'eu',\n",
+       " 'cursus',\n",
+       " 'ligula',\n",
+       " 'nunc',\n",
+       " 'luctus',\n",
+       " 'et',\n",
+       " 'malesuada',\n",
+       " 'fames',\n",
+       " 'ac',\n",
+       " 'dignissim',\n",
+       " 'turpis',\n",
+       " 'praesent',\n",
+       " 'a',\n",
+       " 'leo',\n",
+       " 'vitae',\n",
+       " 'augue',\n",
+       " 'sed',\n",
+       " 'dignissim',\n",
+       " 'vitae',\n",
+       " 'cursus',\n",
+       " 'eu',\n",
+       " 'iaculis',\n",
+       " 'in',\n",
+       " 'elementum',\n",
+       " 'euismod',\n",
+       " 'quam',\n",
+       " 'eu',\n",
+       " 'odio',\n",
+       " 'morbi',\n",
+       " 'dignissim',\n",
+       " 'nulla',\n",
+       " 'in',\n",
+       " 'dictum',\n",
+       " 'sed',\n",
+       " 'vestibulum',\n",
+       " 'et',\n",
+       " 'lobortis',\n",
+       " 'sed',\n",
+       " 'neque',\n",
+       " 'etiam',\n",
+       " 'aliquet',\n",
+       " 'purus',\n",
+       " 'convallis',\n",
+       " 'cursus',\n",
+       " 'tristique',\n",
+       " 'mauris',\n",
+       " 'nec',\n",
+       " 'odio',\n",
+       " 'aliquam',\n",
+       " 'risus',\n",
+       " 'eu',\n",
+       " 'mi',\n",
+       " 'pellentesque',\n",
+       " 'habitant',\n",
+       " 'morbi',\n",
+       " 'tristique',\n",
+       " 'eget',\n",
+       " 'porta',\n",
+       " 'ornare',\n",
+       " 'orci',\n",
+       " 'mauris',\n",
+       " 'eget',\n",
+       " 'sapien',\n",
+       " 'mauris',\n",
+       " 'magna',\n",
+       " 'at',\n",
+       " 'metus',\n",
+       " 'quisque',\n",
+       " 'et',\n",
+       " 'felis',\n",
+       " 'sollicitudin',\n",
+       " 'justo',\n",
+       " 'curabitur',\n",
+       " 'gravida',\n",
+       " 'ullamcorper',\n",
+       " 'ultrices',\n",
+       " 'posuere',\n",
+       " 'commodo',\n",
+       " 'odio',\n",
+       " 'nec',\n",
+       " 'tincidunt',\n",
+       " 'wisi',\n",
+       " 'mollis',\n",
+       " 'nulla',\n",
+       " 'in',\n",
+       " 'erat',\n",
+       " 'volutpat',\n",
+       " 'nunc',\n",
+       " 'id',\n",
+       " 'magna',\n",
+       " 'nullam',\n",
+       " 'dui',\n",
+       " 'turpis',\n",
+       " 'gravida',\n",
+       " 'vel',\n",
+       " 'eros',\n",
+       " 'sed',\n",
+       " 'orci',\n",
+       " 'dui',\n",
+       " 'in',\n",
+       " 'erat',\n",
+       " 'sit',\n",
+       " 'amet',\n",
+       " 'justo',\n",
+       " 'integer',\n",
+       " 'aliquet',\n",
+       " 'eget',\n",
+       " 'pede',\n",
+       " 'duis',\n",
+       " 'luctus',\n",
+       " 'enim',\n",
+       " 'urna',\n",
+       " 'egestas',\n",
+       " 'volutpat',\n",
+       " 'curabitur',\n",
+       " 'tempor',\n",
+       " 'quisque',\n",
+       " 'quis',\n",
+       " 'suscipit',\n",
+       " 'congue',\n",
+       " 'et',\n",
+       " 'accumsan',\n",
+       " 'vitae',\n",
+       " 'vehicula',\n",
+       " 'ullamcorper',\n",
+       " 'augue',\n",
+       " 'quis',\n",
+       " 'venenatis',\n",
+       " 'nulla',\n",
+       " 'ut',\n",
+       " 'leo',\n",
+       " 'maecenas',\n",
+       " 'eu',\n",
+       " 'ante',\n",
+       " 'phasellus',\n",
+       " 'blandit',\n",
+       " 'quam',\n",
+       " 'donec',\n",
+       " 'enim',\n",
+       " 'vel',\n",
+       " 'odio',\n",
+       " 'nam']"
+      ]
+     },
+     "metadata": {},
+     "execution_count": 8
+    }
+   ],
+   "source": [
+    "clear(txt.LOREM)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def isalpha_2(s):\n",
+    "   if not s[0].isalpha(): s=s[1:]\n",
+    "   if not s[-1].isalpha(): s=s[0:-1]\n",
+    "   return s\n",
+    "def clear_2(text):\n",
+    "    t = []\n",
+    "    for word in text.split():\n",
+    "        temp = isalpha(word)\n",
+    "        if temp.isalpha():\n",
+    "            t.append(temp\n",
+    "    return t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def n_grams(word, n):\n",
+    "    grams = []\n",
+    "    for i in range(0, len(word)-n+1):\n",
+    "        grams.append(word[i:i+n])\n",
+    "    return grams\n",
+    "\n",
+    "def generator(text, n):\n",
+    "    t = []\n",
+    "    for word in clear(text):\n",
+    "        t.extend(n_grams(word,n))\n",
+    "    return t\n",
+    "def find_words(txt_list, ngram):\n",
+    "    t = []\n",
+    "    for word in txt_list:\n",
+    "        if word not in t and ngram in word:\n",
+    "            t.append(word)\n",
+    "    return t\n",
+    "    \n",
+    "        \n",
+    "def results(txt_list, ngram_list):\n",
+    "    t = []\n",
+    "    for ng in ngram_list:\n",
+    "        temp = (ng,find_words(txt_list, ng))\n",
+    "        if temp not in t:\n",
+    "            t.append(temp)\n",
+    "    return t\n",
+    "        \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n{'dolor', 'lorem'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "ngrams = generator(txt.LOREM, 3)\n",
+    "op = []\n",
+    "for ngram in ngrams:\n",
+    "    op.extend(find_words(['lorem','dolor'], ngram))\n",
+    "    print(set(op))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "[('lor', ['lorem', 'dolor']), ('ore', ['lorem']), ('rem', ['lorem']), ('ips', ['ipsum']), ('psu', ['ipsum']), ('sum', ['ipsum']), ('dol', ['dolor']), ('olo', ['dolor']), ('sit', ['sit']), ('leo', ['leo']), ('fel', ['felis']), ('eli', ['felis']), ('lis', ['facilisis', 'convallis', 'iaculis', 'mollis', 'felis']), ('vit', ['vitae']), ('ita', ['habitant', 'vitae']), ('tae', ['vitae']), ('arc', ['arcu']), ('rcu', ['arcu']), ('sed', ['sed']), ('nul', ['nulla', 'nullam']), ('ull', ['nulla', 'ullamcorper', 'nullam']), ('lla', ['nulla', 'ullamcorper', 'nullam']), ('iac', ['iaculis']), ('acu', ['iaculis']), ('cul', ['vehicula', 'iaculis', 'ridiculus']), ('uli', ['iaculis']), ('era', ['erat']), ('rat', ['erat']), ('lam', ['ullamcorper', 'nullam']), ('mag', ['magna', 'magnis']), ('agn', ['magna', 'magnis']), ('gni', ['dignissim', 'magnis']), ('nis', ['dignissim', 'magnis']), ('dis', ['dis']), ('par', ['parturient']), ('art', ['parturient']), ('rtu', ['parturient']), ('tur', ['nascetur', 'curabitur', 'turpis', 'parturient']), ('uri', ['mauris', 'parturient']), ('rie', ['parturient']), ('ien', ['sapien', 'parturient']), ('ent', ['pellentesque', 'praesent', 'elementum', 'parturient']), ('mon', ['montes']), ('ont', ['montes']), ('nte', ['integer', 'pellentesque', 'montes', 'ante']), ('tes', ['pellentesque', 'montes']), ('nas', ['nascetur', 'maecenas']), ('asc', ['nascetur']), ('sce', ['nascetur']), ('cet', ['nascetur']), ('etu', ['metus', 'nascetur']), ('rid', ['ridiculus']), ('idi', ['ridiculus']), ('dic', ['dictum', 'ridiculus']), ('icu', ['vehicula', 'ridiculus']), ('ulu', ['vestibulum', 'ridiculus']), ('lus', ['phasellus', 'ridiculus']), ('mus', ['mus']), ('pra', ['praesent']), ('rae', ['praesent']), ('aes', ['praesent']), ('ese', ['praesent']), ('sen', ['praesent']), ('dia', ['diam']), ('iam', ['diam', 'etiam']), ('aen', ['aenean']), ('ene', ['aenean', 'venenatis']), ('nea', ['aenean']), ('ean', ['aenean']), ('fac', ['facilisis']), ('aci', ['facilisis']), ('cil', ['facilisis']), ('ili', ['facilisis']), ('isi', ['facilisis', 'wisi']), ('sis', ['facilisis']), ('hen', ['hendrerit']), ('end', ['hendrerit']), ('ndr', ['hendrerit']), ('dre', ['hendrerit']), ('rer', ['hendrerit']), ('eri', ['hendrerit']), ('rit', ['hendrerit']), ('don', ['donec']), ('one', ['donec']), ('nec', ['donec', 'nec']), ('ero', ['eros']), ('ros', ['eros']), ('lec', ['lectus']), ('ect', ['lectus']), ('ctu', ['lectus', 'luctus', 'dictum']), ('tus', ['lectus', 'metus', 'luctus']), ('cur', ['cursus', 'curabitur']), ('urs', ['cursus']), ('rsu', ['cursus']), ('sus', ['risus', 'cursus', 'suscipit']), ('lig', ['ligula']), ('igu', ['ligula']), ('gul', ['ligula']), ('ula', ['ligula', 'vehicula']), ('nun', ['nunc']), ('unc', ['nunc']), ('luc', ['luctus']), ('uct', ['luctus']), ('mal', ['malesuada']), ('ale', ['malesuada']), ('les', ['malesuada']), ('esu', ['malesuada']), ('sua', ['malesuada']), ('uad', ['malesuada']), ('ada', ['malesuada']), ('fam', ['fames']), ('ame', ['fames', 'amet']), ('mes', ['fames']), ('dig', ['dignissim']), ('ign', ['dignissim']), ('iss', ['dignissim']), ('ssi', ['dignissim']), ('sim', ['dignissim']), ('urp', ['turpis']), ('rpi', ['turpis']), ('pis', ['turpis']), ('aug', ['augue']), ('ugu', ['augue']), ('gue', ['congue', 'augue']), ('ele', ['elementum']), ('lem', ['elementum']), ('eme', ['elementum']), ('men', ['elementum']), ('ntu', ['elementum']), ('tum', ['dictum', 'elementum']), ('eui', ['euismod']), ('uis', ['duis', 'quisque', 'quis', 'euismod']), ('ism', ['euismod']), ('smo', ['euismod']), ('mod', ['commodo', 'euismod']), ('qua', ['quam', 'aliquam']), ('uam', ['quam', 'aliquam']), ('odi', ['odio']), ('dio', ['odio']), ('mor', ['morbi']), ('orb', ['morbi']), ('rbi', ['morbi']), ('ict', ['dictum']), ('ves', ['vestibulum']), ('est', ['vestibulum', 'egestas']), ('sti', ['tristique', 'vestibulum']), ('tib', ['vestibulum']), ('ibu', ['vestibulum']), ('bul', ['vestibulum']), ('lum', ['vestibulum']), ('lob', ['lobortis']), ('obo', ['lobortis']), ('bor', ['lobortis']), ('ort', ['porta', 'lobortis']), ('rti', ['lobortis']), ('tis', ['venenatis', 'lobortis']), ('neq', ['neque']), ('equ', ['neque']), ('que', ['tristique', 'aliquet', 'quisque', 'pellentesque', 'neque']), ('eti', ['etiam']), ('tia', ['etiam']), ('ali', ['aliquet', 'aliquam']), ('liq', ['aliquet', 'aliquam']), ('iqu', ['tristique', 'aliquet', 'aliquam']), ('uet', ['aliquet']), ('pur', ['purus']), ('uru', ['purus']), ('rus', ['purus']), ('con', ['congue', 'convallis']), ('onv', ['convallis']), ('nva', ['convallis']), ('val', ['convallis']), ('all', ['convallis']), ('lli', ['sollicitudin', 'convallis', 'mollis']), ('tri', ['tristique', 'ultrices']), ('ris', ['risus', 'tristique', 'mauris']), ('ist', ['tristique']), ('tiq', ['tristique']), ('mau', ['mauris']), ('aur', ['mauris']), ('isu', ['risus']), ('pel', ['pellentesque']), ('ell', ['pellentesque', 'phasellus']), ('lle', ['pellentesque']), ('len', ['pellentesque']), ('esq', ['pellentesque']), ('squ', ['quisque', 'pellentesque']), ('hab', ['habitant']), ('abi', ['habitant', 'curabitur']), ('bit', ['habitant', 'curabitur']), ('tan', ['habitant']), ('ant', ['habitant', 'ante']), ('ege', ['eget', 'integer', 'egestas']), ('get', ['eget']), ('por', ['porta', 'tempor']), ('rta', ['porta']), ('orn', ['ornare']), ('rna', ['ornare', 'urna']), ('nar', ['ornare']), ('are', ['ornare']), ('orc', ['orci']), ('rci', ['orci']), ('sap', ['sapien']), ('api', ['sapien']), ('pie', ['sapien']), ('gna', ['magna']), ('met', ['metus', 'amet']), ('qui', ['quisque', 'quis']), ('isq', ['quisque']), ('sol', ['sollicitudin']), ('oll', ['sollicitudin', 'mollis']), ('lic', ['sollicitudin']), ('ici', ['sollicitudin']), ('cit', ['sollicitudin']), ('itu', ['sollicitudin', 'curabitur']), ('tud', ['sollicitudin']), ('udi', ['sollicitudin']), ('din', ['sollicitudin']), ('jus', ['justo']), ('ust', ['justo']), ('sto', ['justo']), ('ura', ['curabitur']), ('rab', ['curabitur']), ('gra', ['gravida']), ('rav', ['gravida']), ('avi', ['gravida']), ('vid', ['gravida']), ('ida', ['gravida']), ('amc', ['ullamcorper']), ('mco', ['ullamcorper']), ('cor', ['ullamcorper']), ('orp', ['ullamcorper']), ('rpe', ['ullamcorper']), ('per', ['ullamcorper']), ('ult', ['ultrices']), ('ltr', ['ultrices']), ('ric', ['ultrices']), ('ice', ['ultrices']), ('ces', ['ultrices']), ('pos', ['posuere']), ('osu', ['posuere']), ('sue', ['posuere']), ('uer', ['posuere']), ('ere', ['posuere']), ('com', ['commodo']), ('omm', ['commodo']), ('mmo', ['commodo']), ('odo', ['commodo']), ('tin', ['tincidunt']), ('inc', ['tincidunt']), ('nci', ['tincidunt']), ('cid', ['tincidunt']), ('idu', ['tincidunt']), ('dun', ['tincidunt']), ('unt', ['tincidunt']), ('wis', ['wisi']), ('mol', ['mollis']), ('vol', ['volutpat']), ('olu', ['volutpat']), ('lut', ['volutpat']), ('utp', ['volutpat']), ('tpa', ['volutpat']), ('pat', ['volutpat']), ('dui', ['duis', 'dui']), ('vel', ['vel']), ('int', ['integer']), ('teg', ['integer']), ('ger', ['integer']), ('ped', ['pede']), ('ede', ['pede']), ('eni', ['enim']), ('nim', ['enim']), ('urn', ['urna']), ('ges', ['egestas']), ('sta', ['egestas']), ('tas', ['egestas']), ('tem', ['tempor']), ('emp', ['tempor']), ('mpo', ['tempor']), ('usc', ['suscipit']), ('sci', ['suscipit']), ('cip', ['suscipit']), ('ipi', ['suscipit']), ('pit', ['suscipit']), ('ong', ['congue']), ('ngu', ['congue']), ('acc', ['accumsan']), ('ccu', ['accumsan']), ('cum', ['accumsan']), ('ums', ['accumsan']), ('msa', ['accumsan']), ('san', ['accumsan']), ('veh', ['vehicula']), ('ehi', ['vehicula']), ('hic', ['vehicula']), ('ven', ['venenatis']), ('nen', ['venenatis']), ('ena', ['venenatis', 'maecenas']), ('nat', ['venenatis']), ('ati', ['venenatis']), ('mae', ['maecenas']), ('aec', ['maecenas']), ('ece', ['maecenas']), ('cen', ['maecenas']), ('pha', ['phasellus']), ('has', ['phasellus']), ('ase', ['phasellus']), ('sel', ['phasellus']), ('llu', ['phasellus']), ('bla', ['blandit']), ('lan', ['blandit']), ('and', ['blandit']), ('ndi', ['blandit']), ('dit', ['blandit']), ('nam', ['nam'])]\n"
+     ]
+    }
+   ],
+   "source": [
+    " l=results(set(clear(txt.LOREM)), ngrams)\n",
+    " print(l)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'lor': ['lorem', 'dolor'], 'ore': ['lorem'], 'rem': ['lorem'], 'ips': ['ipsum'], 'psu': ['ipsum'], 'sum': ['ipsum'], 'dol': ['dolor'], 'olo': ['dolor'], 'sit': ['sit'], 'leo': ['leo'], 'fel': ['felis'], 'eli': ['felis'], 'lis': ['facilisis', 'convallis', 'iaculis', 'mollis', 'felis'], 'vit': ['vitae'], 'ita': ['habitant', 'vitae'], 'tae': ['vitae'], 'arc': ['arcu'], 'rcu': ['arcu'], 'sed': ['sed'], 'nul': ['nulla', 'nullam'], 'ull': ['nulla', 'ullamcorper', 'nullam'], 'lla': ['nulla', 'ullamcorper', 'nullam'], 'iac': ['iaculis'], 'acu': ['iaculis'], 'cul': ['vehicula', 'iaculis', 'ridiculus'], 'uli': ['iaculis'], 'era': ['erat'], 'rat': ['erat'], 'lam': ['ullamcorper', 'nullam'], 'mag': ['magna', 'magnis'], 'agn': ['magna', 'magnis'], 'gni': ['dignissim', 'magnis'], 'nis': ['dignissim', 'magnis'], 'dis': ['dis'], 'par': ['parturient'], 'art': ['parturient'], 'rtu': ['parturient'], 'tur': ['nascetur', 'curabitur', 'turpis', 'parturient'], 'uri': ['mauris', 'parturient'], 'rie': ['parturient'], 'ien': ['sapien', 'parturient'], 'ent': ['pellentesque', 'praesent', 'elementum', 'parturient'], 'mon': ['montes'], 'ont': ['montes'], 'nte': ['integer', 'pellentesque', 'montes', 'ante'], 'tes': ['pellentesque', 'montes'], 'nas': ['nascetur', 'maecenas'], 'asc': ['nascetur'], 'sce': ['nascetur'], 'cet': ['nascetur'], 'etu': ['metus', 'nascetur'], 'rid': ['ridiculus'], 'idi': ['ridiculus'], 'dic': ['dictum', 'ridiculus'], 'icu': ['vehicula', 'ridiculus'], 'ulu': ['vestibulum', 'ridiculus'], 'lus': ['phasellus', 'ridiculus'], 'mus': ['mus'], 'pra': ['praesent'], 'rae': ['praesent'], 'aes': ['praesent'], 'ese': ['praesent'], 'sen': ['praesent'], 'dia': ['diam'], 'iam': ['diam', 'etiam'], 'aen': ['aenean'], 'ene': ['aenean', 'venenatis'], 'nea': ['aenean'], 'ean': ['aenean'], 'fac': ['facilisis'], 'aci': ['facilisis'], 'cil': ['facilisis'], 'ili': ['facilisis'], 'isi': ['facilisis', 'wisi'], 'sis': ['facilisis'], 'hen': ['hendrerit'], 'end': ['hendrerit'], 'ndr': ['hendrerit'], 'dre': ['hendrerit'], 'rer': ['hendrerit'], 'eri': ['hendrerit'], 'rit': ['hendrerit'], 'don': ['donec'], 'one': ['donec'], 'nec': ['donec', 'nec'], 'ero': ['eros'], 'ros': ['eros'], 'lec': ['lectus'], 'ect': ['lectus'], 'ctu': ['lectus', 'luctus', 'dictum'], 'tus': ['lectus', 'metus', 'luctus'], 'cur': ['cursus', 'curabitur'], 'urs': ['cursus'], 'rsu': ['cursus'], 'sus': ['risus', 'cursus', 'suscipit'], 'lig': ['ligula'], 'igu': ['ligula'], 'gul': ['ligula'], 'ula': ['ligula', 'vehicula'], 'nun': ['nunc'], 'unc': ['nunc'], 'luc': ['luctus'], 'uct': ['luctus'], 'mal': ['malesuada'], 'ale': ['malesuada'], 'les': ['malesuada'], 'esu': ['malesuada'], 'sua': ['malesuada'], 'uad': ['malesuada'], 'ada': ['malesuada'], 'fam': ['fames'], 'ame': ['fames', 'amet'], 'mes': ['fames'], 'dig': ['dignissim'], 'ign': ['dignissim'], 'iss': ['dignissim'], 'ssi': ['dignissim'], 'sim': ['dignissim'], 'urp': ['turpis'], 'rpi': ['turpis'], 'pis': ['turpis'], 'aug': ['augue'], 'ugu': ['augue'], 'gue': ['congue', 'augue'], 'ele': ['elementum'], 'lem': ['elementum'], 'eme': ['elementum'], 'men': ['elementum'], 'ntu': ['elementum'], 'tum': ['dictum', 'elementum'], 'eui': ['euismod'], 'uis': ['duis', 'quisque', 'quis', 'euismod'], 'ism': ['euismod'], 'smo': ['euismod'], 'mod': ['commodo', 'euismod'], 'qua': ['quam', 'aliquam'], 'uam': ['quam', 'aliquam'], 'odi': ['odio'], 'dio': ['odio'], 'mor': ['morbi'], 'orb': ['morbi'], 'rbi': ['morbi'], 'ict': ['dictum'], 'ves': ['vestibulum'], 'est': ['vestibulum', 'egestas'], 'sti': ['tristique', 'vestibulum'], 'tib': ['vestibulum'], 'ibu': ['vestibulum'], 'bul': ['vestibulum'], 'lum': ['vestibulum'], 'lob': ['lobortis'], 'obo': ['lobortis'], 'bor': ['lobortis'], 'ort': ['porta', 'lobortis'], 'rti': ['lobortis'], 'tis': ['venenatis', 'lobortis'], 'neq': ['neque'], 'equ': ['neque'], 'que': ['tristique', 'aliquet', 'quisque', 'pellentesque', 'neque'], 'eti': ['etiam'], 'tia': ['etiam'], 'ali': ['aliquet', 'aliquam'], 'liq': ['aliquet', 'aliquam'], 'iqu': ['tristique', 'aliquet', 'aliquam'], 'uet': ['aliquet'], 'pur': ['purus'], 'uru': ['purus'], 'rus': ['purus'], 'con': ['congue', 'convallis'], 'onv': ['convallis'], 'nva': ['convallis'], 'val': ['convallis'], 'all': ['convallis'], 'lli': ['sollicitudin', 'convallis', 'mollis'], 'tri': ['tristique', 'ultrices'], 'ris': ['risus', 'tristique', 'mauris'], 'ist': ['tristique'], 'tiq': ['tristique'], 'mau': ['mauris'], 'aur': ['mauris'], 'isu': ['risus'], 'pel': ['pellentesque'], 'ell': ['pellentesque', 'phasellus'], 'lle': ['pellentesque'], 'len': ['pellentesque'], 'esq': ['pellentesque'], 'squ': ['quisque', 'pellentesque'], 'hab': ['habitant'], 'abi': ['habitant', 'curabitur'], 'bit': ['habitant', 'curabitur'], 'tan': ['habitant'], 'ant': ['habitant', 'ante'], 'ege': ['eget', 'integer', 'egestas'], 'get': ['eget'], 'por': ['porta', 'tempor'], 'rta': ['porta'], 'orn': ['ornare'], 'rna': ['ornare', 'urna'], 'nar': ['ornare'], 'are': ['ornare'], 'orc': ['orci'], 'rci': ['orci'], 'sap': ['sapien'], 'api': ['sapien'], 'pie': ['sapien'], 'gna': ['magna'], 'met': ['metus', 'amet'], 'qui': ['quisque', 'quis'], 'isq': ['quisque'], 'sol': ['sollicitudin'], 'oll': ['sollicitudin', 'mollis'], 'lic': ['sollicitudin'], 'ici': ['sollicitudin'], 'cit': ['sollicitudin'], 'itu': ['sollicitudin', 'curabitur'], 'tud': ['sollicitudin'], 'udi': ['sollicitudin'], 'din': ['sollicitudin'], 'jus': ['justo'], 'ust': ['justo'], 'sto': ['justo'], 'ura': ['curabitur'], 'rab': ['curabitur'], 'gra': ['gravida'], 'rav': ['gravida'], 'avi': ['gravida'], 'vid': ['gravida'], 'ida': ['gravida'], 'amc': ['ullamcorper'], 'mco': ['ullamcorper'], 'cor': ['ullamcorper'], 'orp': ['ullamcorper'], 'rpe': ['ullamcorper'], 'per': ['ullamcorper'], 'ult': ['ultrices'], 'ltr': ['ultrices'], 'ric': ['ultrices'], 'ice': ['ultrices'], 'ces': ['ultrices'], 'pos': ['posuere'], 'osu': ['posuere'], 'sue': ['posuere'], 'uer': ['posuere'], 'ere': ['posuere'], 'com': ['commodo'], 'omm': ['commodo'], 'mmo': ['commodo'], 'odo': ['commodo'], 'tin': ['tincidunt'], 'inc': ['tincidunt'], 'nci': ['tincidunt'], 'cid': ['tincidunt'], 'idu': ['tincidunt'], 'dun': ['tincidunt'], 'unt': ['tincidunt'], 'wis': ['wisi'], 'mol': ['mollis'], 'vol': ['volutpat'], 'olu': ['volutpat'], 'lut': ['volutpat'], 'utp': ['volutpat'], 'tpa': ['volutpat'], 'pat': ['volutpat'], 'dui': ['duis', 'dui'], 'vel': ['vel'], 'int': ['integer'], 'teg': ['integer'], 'ger': ['integer'], 'ped': ['pede'], 'ede': ['pede'], 'eni': ['enim'], 'nim': ['enim'], 'urn': ['urna'], 'ges': ['egestas'], 'sta': ['egestas'], 'tas': ['egestas'], 'tem': ['tempor'], 'emp': ['tempor'], 'mpo': ['tempor'], 'usc': ['suscipit'], 'sci': ['suscipit'], 'cip': ['suscipit'], 'ipi': ['suscipit'], 'pit': ['suscipit'], 'ong': ['congue'], 'ngu': ['congue'], 'acc': ['accumsan'], 'ccu': ['accumsan'], 'cum': ['accumsan'], 'ums': ['accumsan'], 'msa': ['accumsan'], 'san': ['accumsan'], 'veh': ['vehicula'], 'ehi': ['vehicula'], 'hic': ['vehicula'], 'ven': ['venenatis'], 'nen': ['venenatis'], 'ena': ['venenatis', 'maecenas'], 'nat': ['venenatis'], 'ati': ['venenatis'], 'mae': ['maecenas'], 'aec': ['maecenas'], 'ece': ['maecenas'], 'cen': ['maecenas'], 'pha': ['phasellus'], 'has': ['phasellus'], 'ase': ['phasellus'], 'sel': ['phasellus'], 'llu': ['phasellus'], 'bla': ['blandit'], 'lan': ['blandit'], 'and': ['blandit'], 'ndi': ['blandit'], 'dit': ['blandit'], 'nam': ['nam']}\n"
+     ]
+    }
+   ],
+   "source": [
+    "D3g=dict(l)\n",
+    "print(D3g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": [
+       "315"
+      ]
+     },
+     "metadata": {},
+     "execution_count": 89
+    }
+   ],
+   "source": [
+    "len(D3g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": [
+       "315"
+      ]
+     },
+     "metadata": {},
+     "execution_count": 90
+    }
+   ],
+   "source": [
+    "len(l)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 99,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "Counter({'sed': 6, 'et': 5, 'eu': 5, 'vitae': 4, 'nulla': 4, 'in': 4, 'odio': 4, 'leo': 3, 'felis': 3, 'erat': 3, 'cursus': 3, 'dignissim': 3, 'mauris': 3, 'eget': 3, 'sit': 2, 'mi': 2, 'arcu': 2, 'iaculis': 2, 'a': 2, 'nullam': 2, 'praesent': 2, 'ac': 2, 'diam': 2, 'donec': 2, 'ut': 2, 'eros': 2, 'nunc': 2, 'luctus': 2, 'turpis': 2, 'augue': 2, 'quam': 2, 'morbi': 2, 'aliquet': 2, 'tristique': 2, 'nec': 2, 'orci': 2, 'magna': 2, 'quisque': 2, 'justo': 2, 'curabitur': 2, 'gravida': 2, 'ullamcorper': 2, 'volutpat': 2, 'dui': 2, 'vel': 2, 'enim': 2, 'quis': 2, 'lorem': 1, 'ipsum': 1, 'dolor': 1, 'magnis': 1, 'dis': 1, 'parturient': 1, 'montes': 1, 'nascetur': 1, 'ridiculus': 1, 'mus': 1, 'aenean': 1, 'facilisis': 1, 'hendrerit': 1, 'lectus': 1, 'ligula': 1, 'malesuada': 1, 'fames': 1, 'elementum': 1, 'euismod': 1, 'dictum': 1, 'vestibulum': 1, 'lobortis': 1, 'neque': 1, 'etiam': 1, 'purus': 1, 'convallis': 1, 'aliquam': 1, 'risus': 1, 'pellentesque': 1, 'habitant': 1, 'porta': 1, 'ornare': 1, 'sapien': 1, 'at': 1, 'metus': 1, 'sollicitudin': 1, 'ultrices': 1, 'posuere': 1, 'commodo': 1, 'tincidunt': 1, 'wisi': 1, 'mollis': 1, 'id': 1, 'amet': 1, 'integer': 1, 'pede': 1, 'duis': 1, 'urna': 1, 'egestas': 1, 'tempor': 1, 'suscipit': 1, 'congue': 1, 'accumsan': 1, 'vehicula': 1, 'venenatis': 1, 'maecenas': 1, 'ante': 1, 'phasellus': 1, 'blandit': 1, 'nam': 1})\n"
+     ]
+    }
+   ],
+   "source": [
+    "from collections import Counter\n",
+    "t=clear(txt.LOREM)\n",
+    "Cslow = Counter(t)\n",
+    "print(Cslow)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "Counter({'lis': 8, 'ull': 8, 'lla': 8, 'que': 8, 'sed': 6, 'nul': 6, 'tur': 6, 'uis': 6, 'ris': 6, 'ita': 5, 'ent': 5, 'cur': 5, 'sus': 5, 'iqu': 5, 'ege': 5, 'vit': 4, 'tae': 4, 'cul': 4, 'lam': 4, 'gni': 4, 'nis': 4, 'uri': 4, 'nte': 4, 'nec': 4, 'ctu': 4, 'tus': 4, 'odi': 4, 'dio': 4, 'qui': 4, 'leo': 3, 'fel': 3, 'eli': 3, 'era': 3, 'rat': 3, 'mag': 3, 'agn': 3, 'iam': 3, 'urs': 3, 'rsu': 3, 'dig': 3, 'ign': 3, 'iss': 3, 'ssi': 3, 'sim': 3, 'gue': 3, 'qua': 3, 'uam': 3, 'sti': 3, 'ali': 3, 'liq': 3, 'lli': 3, 'tri': 3, 'mau': 3, 'aur': 3, 'squ': 3, 'abi': 3, 'bit': 3, 'get': 3, 'itu': 3, 'dui': 3, 'lor': 2, 'sit': 2, 'arc': 2, 'rcu': 2, 'iac': 2, 'acu': 2, 'uli': 2, 'ien': 2, 'tes': 2, 'nas': 2, 'etu': 2, 'dic': 2, 'icu': 2, 'ulu': 2, 'lus': 2, 'pra': 2, 'rae': 2, 'aes': 2, 'ese': 2, 'sen': 2, 'dia': 2, 'ene': 2, 'isi': 2, 'don': 2, 'one': 2, 'ero': 2, 'ros': 2, 'ula': 2, 'nun': 2, 'unc': 2, 'luc': 2, 'uct': 2, 'ame': 2, 'urp': 2, 'rpi': 2, 'pis': 2, 'aug': 2, 'ugu': 2, 'tum': 2, 'mod': 2, 'mor': 2, 'orb': 2, 'rbi': 2, 'est': 2, 'ort': 2, 'tis': 2, 'uet': 2, 'con': 2, 'ist': 2, 'tiq': 2, 'ell': 2, 'ant': 2, 'por': 2, 'rna': 2, 'orc': 2, 'rci': 2, 'gna': 2, 'met': 2, 'isq': 2, 'oll': 2, 'jus': 2, 'ust': 2, 'sto': 2, 'ura': 2, 'rab': 2, 'gra': 2, 'rav': 2, 'avi': 2, 'vid': 2, 'ida': 2, 'amc': 2, 'mco': 2, 'cor': 2, 'orp': 2, 'rpe': 2, 'per': 2, 'vol': 2, 'olu': 2, 'lut': 2, 'utp': 2, 'tpa': 2, 'pat': 2, 'vel': 2, 'eni': 2, 'nim': 2, 'ena': 2, 'ore': 1, 'rem': 1, 'ips': 1, 'psu': 1, 'sum': 1, 'dol': 1, 'olo': 1, 'dis': 1, 'par': 1, 'art': 1, 'rtu': 1, 'rie': 1, 'mon': 1, 'ont': 1, 'asc': 1, 'sce': 1, 'cet': 1, 'rid': 1, 'idi': 1, 'mus': 1, 'aen': 1, 'nea': 1, 'ean': 1, 'fac': 1, 'aci': 1, 'cil': 1, 'ili': 1, 'sis': 1, 'hen': 1, 'end': 1, 'ndr': 1, 'dre': 1, 'rer': 1, 'eri': 1, 'rit': 1, 'lec': 1, 'ect': 1, 'lig': 1, 'igu': 1, 'gul': 1, 'mal': 1, 'ale': 1, 'les': 1, 'esu': 1, 'sua': 1, 'uad': 1, 'ada': 1, 'fam': 1, 'mes': 1, 'ele': 1, 'lem': 1, 'eme': 1, 'men': 1, 'ntu': 1, 'eui': 1, 'ism': 1, 'smo': 1, 'ict': 1, 'ves': 1, 'tib': 1, 'ibu': 1, 'bul': 1, 'lum': 1, 'lob': 1, 'obo': 1, 'bor': 1, 'rti': 1, 'neq': 1, 'equ': 1, 'eti': 1, 'tia': 1, 'pur': 1, 'uru': 1, 'rus': 1, 'onv': 1, 'nva': 1, 'val': 1, 'all': 1, 'isu': 1, 'pel': 1, 'lle': 1, 'len': 1, 'esq': 1, 'hab': 1, 'tan': 1, 'rta': 1, 'orn': 1, 'nar': 1, 'are': 1, 'sap': 1, 'api': 1, 'pie': 1, 'sol': 1, 'lic': 1, 'ici': 1, 'cit': 1, 'tud': 1, 'udi': 1, 'din': 1, 'ult': 1, 'ltr': 1, 'ric': 1, 'ice': 1, 'ces': 1, 'pos': 1, 'osu': 1, 'sue': 1, 'uer': 1, 'ere': 1, 'com': 1, 'omm': 1, 'mmo': 1, 'odo': 1, 'tin': 1, 'inc': 1, 'nci': 1, 'cid': 1, 'idu': 1, 'dun': 1, 'unt': 1, 'wis': 1, 'mol': 1, 'int': 1, 'teg': 1, 'ger': 1, 'ped': 1, 'ede': 1, 'urn': 1, 'ges': 1, 'sta': 1, 'tas': 1, 'tem': 1, 'emp': 1, 'mpo': 1, 'usc': 1, 'sci': 1, 'cip': 1, 'ipi': 1, 'pit': 1, 'ong': 1, 'ngu': 1, 'acc': 1, 'ccu': 1, 'cum': 1, 'ums': 1, 'msa': 1, 'san': 1, 'veh': 1, 'ehi': 1, 'hic': 1, 'ven': 1, 'nen': 1, 'nat': 1, 'ati': 1, 'mae': 1, 'aec': 1, 'ece': 1, 'cen': 1, 'pha': 1, 'has': 1, 'ase': 1, 'sel': 1, 'llu': 1, 'bla': 1, 'lan': 1, 'and': 1, 'ndi': 1, 'dit': 1, 'nam': 1})\n"
+     ]
+    }
+   ],
+   "source": [
+    "C3g = Counter(ngrams)\n",
+    "print(C3g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "metadata": {},
+     "execution_count": 103
+    }
+   ],
+   "source": [
+    "jak_jest = True\n",
+    "for ngram, n in C3g.items():\n",
+    "    if len(D3g[ngram]) == n:\n",
+    "        jak_jest=True\n",
+    "    else:\n",
+    "        jak_jest = False\n",
+    "jak_jest"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'lor': ['dolor', 'lorem'], 'ore': ['lorem'], 'rem': ['lorem'], 'ips': ['ipsum'], 'psu': ['ipsum'], 'sum': ['ipsum'], 'dol': ['dolor'], 'olo': ['dolor'], 'sit': ['sit'], 'leo': ['leo'], 'fel': ['felis'], 'eli': ['felis'], 'lis': ['convallis', 'mollis', 'facilisis', 'felis', 'iaculis'], 'vit': ['vitae'], 'ita': ['vitae', 'habitant'], 'tae': ['vitae'], 'arc': ['arcu'], 'rcu': ['arcu'], 'sed': ['sed'], 'nul': ['nulla', 'nullam'], 'ull': ['nulla', 'nullam', 'ullamcorper'], 'lla': ['nulla', 'nullam', 'ullamcorper'], 'iac': ['iaculis'], 'acu': ['iaculis'], 'cul': ['ridiculus', 'iaculis', 'vehicula'], 'uli': ['iaculis'], 'era': ['erat'], 'rat': ['erat'], 'lam': ['nullam', 'ullamcorper'], 'mag': ['magna', 'magnis'], 'agn': ['magna', 'magnis'], 'gni': ['dignissim', 'magnis'], 'nis': ['dignissim', 'magnis'], 'dis': ['dis'], 'par': ['parturient'], 'art': ['parturient'], 'rtu': ['parturient'], 'tur': ['turpis', 'nascetur', 'parturient', 'curabitur'], 'uri': ['parturient', 'mauris'], 'rie': ['parturient'], 'ien': ['parturient', 'sapien'], 'ent': ['parturient', 'praesent', 'elementum', 'pellentesque'], 'mon': ['montes'], 'ont': ['montes'], 'nte': ['ante', 'montes', 'integer', 'pellentesque'], 'tes': ['montes', 'pellentesque'], 'nas': ['nascetur', 'maecenas'], 'asc': ['nascetur'], 'sce': ['nascetur'], 'cet': ['nascetur'], 'etu': ['nascetur', 'metus'], 'rid': ['ridiculus'], 'idi': ['ridiculus'], 'dic': ['dictum', 'ridiculus'], 'icu': ['ridiculus', 'vehicula'], 'ulu': ['vestibulum', 'ridiculus'], 'lus': ['phasellus', 'ridiculus'], 'mus': ['mus'], 'pra': ['praesent'], 'rae': ['praesent'], 'aes': ['praesent'], 'ese': ['praesent'], 'sen': ['praesent'], 'dia': ['diam'], 'iam': ['diam', 'etiam'], 'aen': ['aenean'], 'ene': ['aenean', 'venenatis'], 'nea': ['aenean'], 'ean': ['aenean'], 'fac': ['facilisis'], 'aci': ['facilisis'], 'cil': ['facilisis'], 'ili': ['facilisis'], 'isi': ['facilisis', 'wisi'], 'sis': ['facilisis'], 'hen': ['hendrerit'], 'end': ['hendrerit'], 'ndr': ['hendrerit'], 'dre': ['hendrerit'], 'rer': ['hendrerit'], 'eri': ['hendrerit'], 'rit': ['hendrerit'], 'don': ['donec'], 'one': ['donec'], 'nec': ['nec', 'donec'], 'ero': ['eros'], 'ros': ['eros'], 'lec': ['lectus'], 'ect': ['lectus'], 'ctu': ['lectus', 'luctus', 'dictum'], 'tus': ['lectus', 'metus', 'luctus'], 'cur': ['cursus', 'curabitur'], 'urs': ['cursus'], 'rsu': ['cursus'], 'sus': ['cursus', 'suscipit', 'risus'], 'lig': ['ligula'], 'igu': ['ligula'], 'gul': ['ligula'], 'ula': ['ligula', 'vehicula'], 'nun': ['nunc'], 'unc': ['nunc'], 'luc': ['luctus'], 'uct': ['luctus'], 'mal': ['malesuada'], 'ale': ['malesuada'], 'les': ['malesuada'], 'esu': ['malesuada'], 'sua': ['malesuada'], 'uad': ['malesuada'], 'ada': ['malesuada'], 'fam': ['fames'], 'ame': ['amet', 'fames'], 'mes': ['fames'], 'dig': ['dignissim'], 'ign': ['dignissim'], 'iss': ['dignissim'], 'ssi': ['dignissim'], 'sim': ['dignissim'], 'urp': ['turpis'], 'rpi': ['turpis'], 'pis': ['turpis'], 'aug': ['augue'], 'ugu': ['augue'], 'gue': ['augue', 'congue'], 'ele': ['elementum'], 'lem': ['elementum'], 'eme': ['elementum'], 'men': ['elementum'], 'ntu': ['elementum'], 'tum': ['dictum', 'elementum'], 'eui': ['euismod'], 'uis': ['euismod', 'quis', 'quisque', 'duis'], 'ism': ['euismod'], 'smo': ['euismod'], 'mod': ['euismod', 'commodo'], 'qua': ['aliquam', 'quam'], 'uam': ['aliquam', 'quam'], 'odi': ['odio'], 'dio': ['odio'], 'mor': ['morbi'], 'orb': ['morbi'], 'rbi': ['morbi'], 'ict': ['dictum'], 'ves': ['vestibulum'], 'est': ['egestas', 'vestibulum'], 'sti': ['tristique', 'vestibulum'], 'tib': ['vestibulum'], 'ibu': ['vestibulum'], 'bul': ['vestibulum'], 'lum': ['vestibulum'], 'lob': ['lobortis'], 'obo': ['lobortis'], 'bor': ['lobortis'], 'ort': ['porta', 'lobortis'], 'rti': ['lobortis'], 'tis': ['lobortis', 'venenatis'], 'neq': ['neque'], 'equ': ['neque'], 'que': ['quisque', 'pellentesque', 'tristique', 'neque', 'aliquet'], 'eti': ['etiam'], 'tia': ['etiam'], 'ali': ['aliquam', 'aliquet'], 'liq': ['aliquam', 'aliquet'], 'iqu': ['aliquam', 'tristique', 'aliquet'], 'uet': ['aliquet'], 'pur': ['purus'], 'uru': ['purus'], 'rus': ['purus'], 'con': ['convallis', 'congue'], 'onv': ['convallis'], 'nva': ['convallis'], 'val': ['convallis'], 'all': ['convallis'], 'lli': ['convallis', 'sollicitudin', 'mollis'], 'tri': ['ultrices', 'tristique'], 'ris': ['tristique', 'risus', 'mauris'], 'ist': ['tristique'], 'tiq': ['tristique'], 'mau': ['mauris'], 'aur': ['mauris'], 'isu': ['risus'], 'pel': ['pellentesque'], 'ell': ['phasellus', 'pellentesque'], 'lle': ['pellentesque'], 'len': ['pellentesque'], 'esq': ['pellentesque'], 'squ': ['quisque', 'pellentesque'], 'hab': ['habitant'], 'abi': ['curabitur', 'habitant'], 'bit': ['curabitur', 'habitant'], 'tan': ['habitant'], 'ant': ['ante', 'habitant'], 'ege': ['egestas', 'eget', 'integer'], 'get': ['eget'], 'por': ['porta', 'tempor'], 'rta': ['porta'], 'orn': ['ornare'], 'rna': ['urna', 'ornare'], 'nar': ['ornare'], 'are': ['ornare'], 'orc': ['orci'], 'rci': ['orci'], 'sap': ['sapien'], 'api': ['sapien'], 'pie': ['sapien'], 'gna': ['magna'], 'met': ['metus', 'amet'], 'qui': ['quis', 'quisque'], 'isq': ['quisque'], 'sol': ['sollicitudin'], 'oll': ['sollicitudin', 'mollis'], 'lic': ['sollicitudin'], 'ici': ['sollicitudin'], 'cit': ['sollicitudin'], 'itu': ['sollicitudin', 'curabitur'], 'tud': ['sollicitudin'], 'udi': ['sollicitudin'], 'din': ['sollicitudin'], 'jus': ['justo'], 'ust': ['justo'], 'sto': ['justo'], 'ura': ['curabitur'], 'rab': ['curabitur'], 'gra': ['gravida'], 'rav': ['gravida'], 'avi': ['gravida'], 'vid': ['gravida'], 'ida': ['gravida'], 'amc': ['ullamcorper'], 'mco': ['ullamcorper'], 'cor': ['ullamcorper'], 'orp': ['ullamcorper'], 'rpe': ['ullamcorper'], 'per': ['ullamcorper'], 'ult': ['ultrices'], 'ltr': ['ultrices'], 'ric': ['ultrices'], 'ice': ['ultrices'], 'ces': ['ultrices'], 'pos': ['posuere'], 'osu': ['posuere'], 'sue': ['posuere'], 'uer': ['posuere'], 'ere': ['posuere'], 'com': ['commodo'], 'omm': ['commodo'], 'mmo': ['commodo'], 'odo': ['commodo'], 'tin': ['tincidunt'], 'inc': ['tincidunt'], 'nci': ['tincidunt'], 'cid': ['tincidunt'], 'idu': ['tincidunt'], 'dun': ['tincidunt'], 'unt': ['tincidunt'], 'wis': ['wisi'], 'mol': ['mollis'], 'vol': ['volutpat'], 'olu': ['volutpat'], 'lut': ['volutpat'], 'utp': ['volutpat'], 'tpa': ['volutpat'], 'pat': ['volutpat'], 'dui': ['dui', 'duis'], 'vel': ['vel'], 'int': ['integer'], 'teg': ['integer'], 'ger': ['integer'], 'ped': ['pede'], 'ede': ['pede'], 'eni': ['enim'], 'nim': ['enim'], 'urn': ['urna'], 'ges': ['egestas'], 'sta': ['egestas'], 'tas': ['egestas'], 'tem': ['tempor'], 'emp': ['tempor'], 'mpo': ['tempor'], 'usc': ['suscipit'], 'sci': ['suscipit'], 'cip': ['suscipit'], 'ipi': ['suscipit'], 'pit': ['suscipit'], 'ong': ['congue'], 'ngu': ['congue'], 'acc': ['accumsan'], 'ccu': ['accumsan'], 'cum': ['accumsan'], 'ums': ['accumsan'], 'msa': ['accumsan'], 'san': ['accumsan'], 'veh': ['vehicula'], 'ehi': ['vehicula'], 'hic': ['vehicula'], 'ven': ['venenatis'], 'nen': ['venenatis'], 'ena': ['maecenas', 'venenatis'], 'nat': ['venenatis'], 'ati': ['venenatis'], 'mae': ['maecenas'], 'aec': ['maecenas'], 'ece': ['maecenas'], 'cen': ['maecenas'], 'pha': ['phasellus'], 'has': ['phasellus'], 'ase': ['phasellus'], 'sel': ['phasellus'], 'llu': ['phasellus'], 'bla': ['blandit'], 'lan': ['blandit'], 'and': ['blandit'], 'ndi': ['blandit'], 'dit': ['blandit'], 'nam': ['nam']}\n"
+     ]
+    }
+   ],
+   "source": [
+    "for ngram, l in D3g.items():\n",
+    "    D3g[ngram] = list(set(l))\n",
+    "print(D3g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": [
+      "{'lor': ['dolor', 'lorem'], 'lis': ['convallis', 'mollis', 'facilisis', 'felis', 'iaculis'], 'ita': ['vitae', 'habitant'], 'nul': ['nulla', 'nullam'], 'ull': ['nulla', 'nullam', 'ullamcorper'], 'lla': ['nulla', 'nullam', 'ullamcorper'], 'cul': ['ridiculus', 'iaculis', 'vehicula'], 'lam': ['nullam', 'ullamcorper'], 'mag': ['magna', 'magnis'], 'agn': ['magna', 'magnis'], 'gni': ['dignissim', 'magnis'], 'nis': ['dignissim', 'magnis'], 'tur': ['turpis', 'nascetur', 'parturient', 'curabitur'], 'uri': ['parturient', 'mauris'], 'ien': ['parturient', 'sapien'], 'ent': ['parturient', 'praesent', 'elementum', 'pellentesque'], 'nte': ['ante', 'montes', 'integer', 'pellentesque'], 'tes': ['montes', 'pellentesque'], 'nas': ['nascetur', 'maecenas'], 'etu': ['nascetur', 'metus'], 'dic': ['dictum', 'ridiculus'], 'icu': ['ridiculus', 'vehicula'], 'ulu': ['vestibulum', 'ridiculus'], 'lus': ['phasellus', 'ridiculus'], 'iam': ['diam', 'etiam'], 'ene': ['aenean', 'venenatis'], 'isi': ['facilisis', 'wisi'], 'nec': ['nec', 'donec'], 'ctu': ['lectus', 'luctus', 'dictum'], 'tus': ['lectus', 'metus', 'luctus'], 'cur': ['cursus', 'curabitur'], 'sus': ['cursus', 'suscipit', 'risus'], 'ula': ['ligula', 'vehicula'], 'ame': ['amet', 'fames'], 'gue': ['augue', 'congue'], 'tum': ['dictum', 'elementum'], 'uis': ['euismod', 'quis', 'quisque', 'duis'], 'mod': ['euismod', 'commodo'], 'qua': ['aliquam', 'quam'], 'uam': ['aliquam', 'quam'], 'est': ['egestas', 'vestibulum'], 'sti': ['tristique', 'vestibulum'], 'ort': ['porta', 'lobortis'], 'tis': ['lobortis', 'venenatis'], 'que': ['quisque', 'pellentesque', 'tristique', 'neque', 'aliquet'], 'ali': ['aliquam', 'aliquet'], 'liq': ['aliquam', 'aliquet'], 'iqu': ['aliquam', 'tristique', 'aliquet'], 'con': ['convallis', 'congue'], 'lli': ['convallis', 'sollicitudin', 'mollis'], 'tri': ['ultrices', 'tristique'], 'ris': ['tristique', 'risus', 'mauris'], 'ell': ['phasellus', 'pellentesque'], 'squ': ['quisque', 'pellentesque'], 'abi': ['curabitur', 'habitant'], 'bit': ['curabitur', 'habitant'], 'ant': ['ante', 'habitant'], 'ege': ['egestas', 'eget', 'integer'], 'por': ['porta', 'tempor'], 'rna': ['urna', 'ornare'], 'met': ['metus', 'amet'], 'qui': ['quis', 'quisque'], 'oll': ['sollicitudin', 'mollis'], 'itu': ['sollicitudin', 'curabitur'], 'dui': ['dui', 'duis'], 'ena': ['maecenas', 'venenatis']}\n"
+     ]
+    }
+   ],
+   "source": [
+    "for ngram, l in list(D3g.items()):\n",
+    "    if len(l) < 2:\n",
+    "        del(D3g[ngram])\n",
+    "print(D3g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ]
+}
